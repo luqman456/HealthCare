@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ViewDataActivity"
+    android:background="@color/grey_light_thin"
+    >
+
+    <LinearLayout
+        android:id="@+id/diabetes_level"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginTop="@dimen/_20sdp"
+        >
+
+        <TextView
+            android:id="@+id/textViewSug"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="wrap_content"
+            android:textSize="@dimen/_20sdp"
+            android:textColor="@color/colorBackground"
+            android:background="@drawable/roundedtextview"
+            android:text="Sugar Level"
+            android:gravity="center"
+            android:textStyle="bold"
+            android:layout_marginLeft="@dimen/_5sdp"
+            android:layout_marginRight="@dimen/_5sdp"
+            />
+
+        <TextView
+            android:id="@+id/textViewBp"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="wrap_content"
+            android:textSize="@dimen/_20sdp"
+            android:textColor="@color/colorBackground"
+            android:background="@drawable/roundedtextview"
+            android:text="BP Level"
+            android:gravity="center"
+            android:textStyle="bold"
+            android:layout_marginRight="@dimen/_5sdp"
+            android:layout_marginLeft="@dimen/_5sdp"
+            />
+
+    </LinearLayout>
+
+    <ListView
+        android:layout_below="@id/diabetes_level"
+        android:id="@+id/list_view_sugar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:dividerHeight="1dp"
+        android:padding="10dp"
+        android:visibility="gone"
+        >
+    </ListView>
+
+    <ListView
+        android:layout_below="@id/diabetes_level"
+        android:id="@+id/list_view_bp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:dividerHeight="1dp"
+        android:padding="10dp"
+        android:visibility="gone"
+        >
+    </ListView>
+
+</RelativeLayout>

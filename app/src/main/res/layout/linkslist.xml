@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="horizontal"
+    android:background="@color/grey_light_thin"
+    >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_marginLeft="@dimen/_5sdp"
+        android:layout_marginRight="@dimen/_5sdp"
+        >
+
+        <TextView
+            android:id="@+id/title"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Which foods lower blood sugar? How can you lower your blood sugar levels?"
+            android:textStyle="bold"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:layout_marginTop="5dp"
+            android:padding="2dp"
+            android:textColor="#5e6167"
+            android:textSize="@dimen/_12sdp"
+            android:gravity="start"
+            android:justificationMode="inter_word"
+            />
+
+        <TextView
+            android:id="@+id/description"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Increased insulin sensitivity means your cells are better able to use the available sugar in your bloodstream."
+            android:textSize="@dimen/_11sdp"
+            android:gravity="start"
+            android:textColor="@color/gray_back_color"
+            android:justificationMode="inter_word"
+            />
+
+        <TextView
+            android:id="@+id/link"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="https://www.medicalnewstoday.com/articles/318716"
+            android:textSize="@dimen/_10sdp"
+            android:autoLink="web"
+            android:gravity="start"
+            android:justificationMode="inter_word"
+            android:layout_marginBottom="@dimen/_5sdp"
+            />
+
+    </LinearLayout>
+
+</LinearLayout>

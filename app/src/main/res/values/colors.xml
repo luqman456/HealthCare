@@ -15,5 +15,9 @@
     <color name="darkred"> #C2112F</color>
     <color name="colorBackground">#413e4f</color>
     <color name="grey_light_thin">#f9f9f9</color>
+    <color name="elevated">#ffda46</color>
+    <color name="stage1">#f99f2c</color>
+    <color name="stage2">#f99f2c</color>
+    <color name="hypertensive">#f05139</color>
 
 </resources>

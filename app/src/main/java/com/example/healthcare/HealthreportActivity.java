@@ -26,10 +26,11 @@ public class HealthreportActivity extends AppCompatActivity {
     private Context context;
     DatabaseHelper databaseHelper;
     List<Integer> sugarList;
-    RelativeLayout sugarRelativeLayout;
+    RelativeLayout sugarRelativeLayout,BpRelativeLayout;
     TextView textViewSugarAc,textViewSugarEac,textViewSugarLevel;
+    TextView textViewBpLevel,textViewSugarSystolic,textViewDiastolic;
     String week = "";
-
+    List<Integer> bpList;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -40,10 +41,15 @@ public class HealthreportActivity extends AppCompatActivity {
         textViewSugarAc = (TextView) findViewById(R.id.textViewA1C);
         textViewSugarEac = (TextView) findViewById(R.id.textViewmmol);
         textViewSugarLevel = (TextView) findViewById(R.id.textViewSuagrLevel);
+        textViewBpLevel = (TextView) findViewById(R.id.textViewPBLevel);
+        textViewSugarSystolic = (TextView) findViewById(R.id.textViewsystolic);
+        textViewDiastolic = (TextView) findViewById(R.id.textViewDiastolic);
         sugarRelativeLayout = (RelativeLayout) findViewById(R.id.relativeSugar);
+        BpRelativeLayout = (RelativeLayout) findViewById(R.id.relativeBP);
         context = this;
         databaseHelper = new DatabaseHelper(this);
         sugarList = new ArrayList<>();
+        bpList = new ArrayList<>();
 
 //        Date c = Calendar.getInstance().getTime();
 //        SimpleDateFormat df = new SimpleDateFormat("dd/MM/yyyy", Locale.getDefault());
@@ -55,7 +61,6 @@ public class HealthreportActivity extends AppCompatActivity {
         int month = c.get(Calendar.MONTH);
         week = getIntent().getExtras().getString("week");
 
-//        formattedDate,getCalculatedDate(formattedDate, "dd/MM/yyyy", -7)
 
         textViewSugar.setOnClickListener(new View.OnClickListener() {
             @SuppressLint("ResourceType")
@@ -64,7 +69,12 @@ public class HealthreportActivity extends AppCompatActivity {
                 textViewBp.setBackgroundResource(R.drawable.roundedtextview);
                 textViewSugar.setBackgroundResource(R.drawable.roundedcornertextviewcolor);
                 sugarRelativeLayout.setVisibility(View.VISIBLE);
+                BpRelativeLayout.setVisibility(View.GONE);
 
+                textViewSugarAc.setText("0.0 %");
+                textViewSugarEac.setText("0.0 mmol/l");
+
+                sugarList.clear();
                 int suger_level = 0;
                 int suger_count = 0;
                 int sugar_result = 0;
@@ -169,9 +179,8 @@ public class HealthreportActivity extends AppCompatActivity {
 
                 else{
                     sugarRelativeLayout.setVisibility(View.GONE);
+                    Toast.makeText(context, "Please add data", Toast.LENGTH_SHORT).show();
                 }
-
-
 
             }
         });
@@ -183,8 +192,129 @@ public class HealthreportActivity extends AppCompatActivity {
                 textViewBp.setBackgroundResource(R.drawable.roundedcornertextviewcolor);
                 textViewSugar.setBackgroundResource(R.drawable.roundedtextview);
                 sugarRelativeLayout.setVisibility(View.GONE);
+                BpRelativeLayout.setVisibility(View.VISIBLE);
 
-                // System.out.println("Current date => " + getCalculatedDate(formattedDate, "dd/MM/yyyy", -6));
+                textViewSugarSystolic.setText("0");
+                textViewDiastolic.setText("0");
+
+                bpList.clear();
+                int systolic_level = 0;
+                int pb_count = 0;
+                int systolic_result = 0;
+                int diastolic_result = 0;
+                int diastolic_level = 0;
+                bpList = databaseHelper.getBP(UserData.user_email, week, month, year);
+                Log.e("list_count", "" + bpList.size());
+                for (int i = 0; i <bpList.size(); i++) {
+                    pb_count++;
+                    systolic_level = systolic_level + bpList.get(i);
+                    ++i;
+                    diastolic_level = diastolic_level + bpList.get(i);
+                }
+                Log.e("counts", "" + pb_count);
+                Log.e("systolic", "" + systolic_level);
+                Log.e("dystolic", "" + diastolic_level);
+
+                if (pb_count > 0) {
+                    systolic_result = systolic_level/pb_count;
+                    diastolic_result = diastolic_level/pb_count;
+                    Log.e("systolic_result", "" + systolic_result);
+                    Log.e("diastolic_result", "" + diastolic_result);
+                    if(pb_count ==1){
+                        Toast.makeText(context, "Please Add Remaining Days Data", Toast.LENGTH_SHORT).show();
+                    }
+                    else if(pb_count == 2){
+                        Toast.makeText(context, "Please Add Remaining Days Data", Toast.LENGTH_SHORT).show();
+                    }
+                    else if(pb_count == 3){
+                        Toast.makeText(context, "Please Add Remaining Days Data", Toast.LENGTH_SHORT).show();
+                    }
+                    else if(pb_count == 4){
+                        Toast.makeText(context, "Please Add Remaining Days Data", Toast.LENGTH_SHORT).show();
+                    }
+                    else if(pb_count ==5){
+                        Toast.makeText(context, "Please Add Remaining Days Data", Toast.LENGTH_SHORT).show();
+                    }
+                    else if(pb_count ==6){
+                        Toast.makeText(context, "Please Add Remaining Days Data", Toast.LENGTH_SHORT).show();
+                    }
+                    else if(pb_count == 7)
+                    {
+
+                        if(systolic_result >= 120 && diastolic_result <= 180){
+
+                            textViewSugarSystolic.setText(String.valueOf(systolic_result));
+                            textViewDiastolic.setText(String.valueOf(diastolic_result));
+
+                            textViewBpLevel.setText("BP Level Normal");
+                            textViewBpLevel.setBackgroundResource(R.drawable.normal);
+                        }
+                        else if((systolic_result >= 120 && systolic_result<=129)  && diastolic_result <=80){
+
+                            textViewSugarSystolic.setText(String.valueOf(systolic_result));
+                            textViewDiastolic.setText(String.valueOf(diastolic_result));
+
+                            textViewBpLevel.setText("BP Level Elevated");
+                            textViewBpLevel.setBackgroundResource(R.drawable.elevated);
+                        }
+                        else if((systolic_result >= 130 && systolic_result<=139)  && (diastolic_result >=80 && diastolic_result<=89)){
+
+                            textViewSugarSystolic.setText(String.valueOf(systolic_result));
+                            textViewDiastolic.setText(String.valueOf(diastolic_result));
+
+                            textViewBpLevel.setText("BP Level High Stage 1");
+                            textViewBpLevel.setBackgroundResource(R.drawable.stage1);
+
+                        }
+                        else if((systolic_result >= 140)  && (diastolic_result >=90)){
+
+                            textViewSugarSystolic.setText(String.valueOf(systolic_result));
+                            textViewDiastolic.setText(String.valueOf(diastolic_result));
+
+                            textViewBpLevel.setText("BP Level High Stage 2");
+                            textViewBpLevel.setBackgroundResource(R.drawable.stage2);
+                        }
+                        else if((systolic_result >= 180)  && (diastolic_result >=120)){
+
+                            textViewSugarSystolic.setText(String.valueOf(systolic_result));
+                            textViewDiastolic.setText(String.valueOf(diastolic_result));
+
+                            textViewBpLevel.setText("BP Level Hypertensive Crisis");
+                            textViewBpLevel.setBackgroundResource(R.drawable.hypertensive);
+                        }
+                        else if(systolic_result >=197 && systolic_result <=212){
+
+                            textViewSugarSystolic.setText(String.valueOf(systolic_result));
+                            textViewDiastolic.setText(String.valueOf(diastolic_result));
+
+                        }else if(systolic_result >=212 && systolic_result <=226){
+
+                            textViewSugarSystolic.setText(String.valueOf(systolic_result));
+                            textViewDiastolic.setText(String.valueOf(diastolic_result));
+
+                        }else if(systolic_result >=226 && systolic_result <=240){
+
+                            textViewSugarSystolic.setText(String.valueOf(systolic_result));
+                            textViewDiastolic.setText(String.valueOf(diastolic_result));
+                        }
+                        else if(systolic_result >=240){
+
+                            textViewSugarSystolic.setText(String.valueOf(systolic_result));
+                            textViewDiastolic.setText(String.valueOf(diastolic_result));
+                        }
+                        else if(systolic_result >=240 && systolic_result <=380){
+
+                            textViewSugarSystolic.setText(String.valueOf(systolic_result));
+                            textViewDiastolic.setText(String.valueOf(diastolic_result));
+                        }
+
+                    }
+                }
+                else{
+                    BpRelativeLayout.setVisibility(View.GONE);
+                    Toast.makeText(context, "Please add data", Toast.LENGTH_SHORT).show();
+                }
+
             }
         });
     }

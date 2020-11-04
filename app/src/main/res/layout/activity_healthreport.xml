@@ -166,4 +166,119 @@
 
     </RelativeLayout>
 
+    <RelativeLayout
+        android:id="@+id/relativeBP"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:visibility="gone"
+        >
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="@dimen/_20sdp"
+            android:textColor="@color/colorBackground"
+            android:text="Blood Pressue Level"
+            android:gravity="left"
+            android:textStyle="bold"
+            android:layout_marginLeft="@dimen/_5sdp"
+            android:layout_marginRight="@dimen/_5sdp"
+            />
+
+        <TextView
+            android:id="@+id/textViewPBLevel"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="@dimen/_20sdp"
+            android:textColor="@color/white"
+            android:text="Please Add Your BP Level"
+            android:background="@drawable/nolevel"
+            android:gravity="center"
+            android:textStyle="bold"
+            android:layout_marginTop="@dimen/_30sdp"
+            android:layout_marginLeft="@dimen/_5sdp"
+            android:layout_marginRight="@dimen/_5sdp"
+            />
+
+        <LinearLayout
+            android:id="@+id/linearsystolic"
+            android:layout_below="@id/textViewPBLevel"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginTop="@dimen/_10sdp"
+            >
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="@dimen/_20sdp"
+                android:textColor="@color/colorBackground"
+                android:text="Systolic :"
+                android:gravity="left"
+                android:textStyle="bold"
+                android:layout_marginLeft="@dimen/_5sdp"
+                android:layout_marginRight="@dimen/_5sdp"
+                />
+
+            <TextView
+                android:id="@+id/textViewsystolic"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="wrap_content"
+                android:textSize="@dimen/_18sdp"
+                android:textColor="@color/colorBackground"
+                android:background="@drawable/roundedtextviewac"
+                android:text="0.0"
+                android:gravity="center"
+                android:textStyle="bold"
+                android:paddingTop="@dimen/_2sdp"
+                android:paddingBottom="@dimen/_2sdp"
+                android:layout_marginLeft="@dimen/_5sdp"
+                android:layout_marginRight="@dimen/_5sdp"
+                />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_below="@id/linearsystolic"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginTop="@dimen/_10sdp"
+            >
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="@dimen/_20sdp"
+                android:textColor="@color/colorBackground"
+                android:text="Diastolic :"
+                android:gravity="left"
+                android:textStyle="bold"
+                android:layout_marginLeft="@dimen/_5sdp"
+                />
+
+            <TextView
+                android:id="@+id/textViewDiastolic"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="wrap_content"
+                android:textSize="@dimen/_18sdp"
+                android:textColor="@color/colorBackground"
+                android:background="@drawable/roundedtextviewac"
+                android:text="0.0"
+                android:gravity="center"
+                android:textStyle="bold"
+                android:paddingTop="@dimen/_2sdp"
+                android:paddingBottom="@dimen/_2sdp"
+                android:layout_marginLeft="@dimen/_3sdp"
+                android:layout_marginRight="@dimen/_5sdp"
+                />
+
+        </LinearLayout>
+
+
+    </RelativeLayout>
+
 </RelativeLayout>

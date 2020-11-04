@@ -80,6 +80,7 @@ public class DatabaseHelper extends SQLiteOpenHelper {
     private String DROP_BP_TABLE = "DROP TABLE IF EXISTS " + TABLE_BP;
 
     private List<Integer> list = new ArrayList<>();
+    private List<Integer> bp_list = new ArrayList<>();
 
 
     public DatabaseHelper(Context context) {
@@ -227,6 +228,7 @@ public class DatabaseHelper extends SQLiteOpenHelper {
 
     public List<Integer> getSugar(String email,String weeks,int month,int year) {
         try {
+            list.clear();
             int month_year = Integer.parseInt(month + "" + year);
             SQLiteDatabase db = this.getReadableDatabase();
 
@@ -363,5 +365,29 @@ public class DatabaseHelper extends SQLiteOpenHelper {
             e.printStackTrace();
         }
         return bpLevels;
+    }
+
+    public List<Integer> getBP(String email,String weeks,int month,int year) {
+        try {
+            bp_list.clear();
+            int month_year = Integer.parseInt(month + "" + year);
+            SQLiteDatabase db = this.getReadableDatabase();
+
+            String dateQuery = "SELECT user_bp_systolic_pressure_level,user_bp_diastolic_pressure_level FROM bp WHERE weeks = ? AND month_year = ? AND user_email = ?";
+            String[] selectionArgs = {weeks, String.valueOf(month_year), email};
+            Cursor cursor = db.rawQuery(dateQuery, selectionArgs);
+            if (cursor.moveToFirst()) {
+                do {
+                    if (cursor.getCount() > 0) {
+                        bp_list.add(Integer.valueOf(cursor.getInt(cursor.getColumnIndex(COLUMN_USER_BP_SYSTOLIC_PRESSURE))));
+                        bp_list.add(Integer.valueOf(cursor.getInt(cursor.getColumnIndex(COLUMN_USER_BP_DIASTOLIC_PRESSURE))));
+                    }
+                } while (cursor.moveToNext());
+            }
+            return bp_list;
+        }catch (Exception e){
+            e.printStackTrace();
+        }
+        return bp_list;
     }
 }

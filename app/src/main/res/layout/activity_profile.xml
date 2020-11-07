@@ -82,7 +82,7 @@
                                 android:layout_width="@dimen/_100sdp"
                                 android:layout_height="wrap_content"
                                 android:text="Name"
-                                android:textSize="16sp"
+                                android:textSize="15sp"
                                 android:textColor="@color/black"/>
 
 
@@ -98,7 +98,7 @@
                                 android:padding="@dimen/_5sdp"
                                 android:textColorHint="@color/black"
                                 android:textColor="@color/black"
-                                android:textSize="13sp"
+                                android:textSize="10sp"
                                 />
 
                         </LinearLayout>
@@ -118,7 +118,7 @@
                             android:layout_width="@dimen/_100sdp"
                             android:layout_height="wrap_content"
                             android:text="Email"
-                            android:textSize="16sp"
+                            android:textSize="15sp"
                             android:textColor="@color/black"/>
 
 
@@ -133,7 +133,7 @@
                             android:padding="@dimen/_5sdp"
                             android:textColorHint="@color/black"
                             android:textColor="@color/black"
-                            android:textSize="13sp"
+                            android:textSize="10sp"
                             />
 
 
@@ -162,7 +162,7 @@
                                 android:layout_width="@dimen/_100sdp"
                                 android:layout_height="wrap_content"
                                 android:text="Age"
-                                android:textSize="16sp"
+                                android:textSize="15sp"
                                 android:textColor="@color/black"/>
 
 
@@ -178,7 +178,7 @@
                                 android:padding="@dimen/_5sdp"
                                 android:textColorHint="@color/black"
                                 android:textColor="@color/black"
-                                android:textSize="13sp"
+                                android:textSize="10sp"
                                 />
 
                         </LinearLayout>
@@ -198,7 +198,7 @@
                             android:layout_width="@dimen/_100sdp"
                             android:layout_height="wrap_content"
                             android:text="Height"
-                            android:textSize="16sp"
+                            android:textSize="15sp"
                             android:textColor="@color/black"/>
 
 
@@ -214,7 +214,7 @@
                             android:padding="@dimen/_5sdp"
                             android:textColorHint="@color/black"
                             android:textColor="@color/black"
-                            android:textSize="13sp"
+                            android:textSize="10sp"
                             />
 
 
@@ -242,7 +242,7 @@
                                 android:layout_width="@dimen/_100sdp"
                                 android:layout_height="wrap_content"
                                 android:text="Weight"
-                                android:textSize="16sp"
+                                android:textSize="15sp"
                                 android:textColor="@color/black"/>
 
 
@@ -258,7 +258,7 @@
                                 android:padding="@dimen/_5sdp"
                                 android:textColorHint="@color/black"
                                 android:textColor="@color/black"
-                                android:textSize="13sp"
+                                android:textSize="10sp"
                                 />
 
                         </LinearLayout>

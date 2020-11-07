@@ -24,6 +24,7 @@
         android:layout_height="wrap_content"
         android:layout_marginLeft="10dp"
         android:text=""
+        android:visibility="gone"
         android:textAppearance="?android:attr/textAppearanceMedium" />
 
     <TextView
@@ -32,6 +33,7 @@
         android:layout_height="wrap_content"
         android:layout_marginLeft="10dp"
         android:text=""
+        android:visibility="gone"
         android:textAppearance="?android:attr/textAppearanceMedium" />
 
 </LinearLayout>

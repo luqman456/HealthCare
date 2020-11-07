@@ -21,7 +21,7 @@
             android:layout_width="0dp"
             android:layout_weight="1"
             android:layout_height="wrap_content"
-            android:textSize="@dimen/_20sdp"
+            android:textSize="@dimen/_18sdp"
             android:textColor="@color/colorBackground"
             android:background="@drawable/roundedtextview"
             android:text="Sugar Level"
@@ -29,6 +29,7 @@
             android:textStyle="bold"
             android:layout_marginLeft="@dimen/_5sdp"
             android:layout_marginRight="@dimen/_5sdp"
+            android:padding="@dimen/_5sdp"
             />
 
         <TextView
@@ -36,7 +37,7 @@
             android:layout_width="0dp"
             android:layout_weight="1"
             android:layout_height="wrap_content"
-            android:textSize="@dimen/_20sdp"
+            android:textSize="@dimen/_18sdp"
             android:textColor="@color/colorBackground"
             android:background="@drawable/roundedtextview"
             android:text="BP Level"
@@ -44,6 +45,7 @@
             android:textStyle="bold"
             android:layout_marginRight="@dimen/_5sdp"
             android:layout_marginLeft="@dimen/_5sdp"
+            android:padding="@dimen/_5sdp"
             />
 
     </LinearLayout>
@@ -58,7 +60,7 @@
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:textSize="@dimen/_20sdp"
+            android:textSize="@dimen/_18sdp"
             android:textColor="@color/colorBackground"
             android:text="Sugar Level : Pre-Diabetes"
             android:gravity="left"
@@ -71,7 +73,7 @@
             android:id="@+id/textViewSuagrLevel"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:textSize="@dimen/_20sdp"
+            android:textSize="@dimen/_17sdp"
             android:textColor="@color/white"
             android:text="Please Add Your Sugar Level"
             android:background="@drawable/nolevel"
@@ -94,7 +96,7 @@
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:textSize="@dimen/_20sdp"
+                android:textSize="@dimen/_16sdp"
                 android:textColor="@color/colorBackground"
                 android:text="A1C :"
                 android:gravity="left"
@@ -108,7 +110,7 @@
                 android:layout_width="0dp"
                 android:layout_weight="1"
                 android:layout_height="wrap_content"
-                android:textSize="@dimen/_18sdp"
+                android:textSize="@dimen/_16sdp"
                 android:textColor="@color/colorBackground"
                 android:background="@drawable/roundedtextviewac"
                 android:text="0.0"
@@ -132,7 +134,7 @@
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:textSize="@dimen/_20sdp"
+                android:textSize="@dimen/_16sdp"
                 android:textColor="@color/colorBackground"
                 android:text="EAG :"
                 android:gravity="left"
@@ -146,7 +148,7 @@
                 android:layout_width="0dp"
                 android:layout_weight="1"
                 android:layout_height="wrap_content"
-                android:textSize="@dimen/_18sdp"
+                android:textSize="@dimen/_16sdp"
                 android:textColor="@color/colorBackground"
                 android:background="@drawable/roundedtextvieweag"
                 android:text="0.0"
@@ -176,7 +178,7 @@
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:textSize="@dimen/_20sdp"
+            android:textSize="@dimen/_18sdp"
             android:textColor="@color/colorBackground"
             android:text="Blood Pressue Level"
             android:gravity="left"
@@ -189,7 +191,7 @@
             android:id="@+id/textViewPBLevel"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:textSize="@dimen/_20sdp"
+            android:textSize="@dimen/_17sdp"
             android:textColor="@color/white"
             android:text="Please Add Your BP Level"
             android:background="@drawable/nolevel"
@@ -212,7 +214,7 @@
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:textSize="@dimen/_20sdp"
+                android:textSize="@dimen/_16sdp"
                 android:textColor="@color/colorBackground"
                 android:text="Systolic :"
                 android:gravity="left"
@@ -226,7 +228,7 @@
                 android:layout_width="0dp"
                 android:layout_weight="1"
                 android:layout_height="wrap_content"
-                android:textSize="@dimen/_18sdp"
+                android:textSize="@dimen/_16sdp"
                 android:textColor="@color/colorBackground"
                 android:background="@drawable/roundedtextviewac"
                 android:text="0.0"
@@ -251,7 +253,7 @@
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:textSize="@dimen/_20sdp"
+                android:textSize="@dimen/_16sdp"
                 android:textColor="@color/colorBackground"
                 android:text="Diastolic :"
                 android:gravity="left"
@@ -264,7 +266,7 @@
                 android:layout_width="0dp"
                 android:layout_weight="1"
                 android:layout_height="wrap_content"
-                android:textSize="@dimen/_18sdp"
+                android:textSize="@dimen/_16sdp"
                 android:textColor="@color/colorBackground"
                 android:background="@drawable/roundedtextviewac"
                 android:text="0.0"
@@ -272,7 +274,7 @@
                 android:textStyle="bold"
                 android:paddingTop="@dimen/_2sdp"
                 android:paddingBottom="@dimen/_2sdp"
-                android:layout_marginLeft="@dimen/_3sdp"
+                android:layout_marginLeft="@dimen/_5sdp"
                 android:layout_marginRight="@dimen/_5sdp"
                 />
 

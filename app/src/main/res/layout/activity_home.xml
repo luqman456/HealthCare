@@ -21,7 +21,7 @@
             android:id="@+id/textViewNameChar"
             android:layout_width="@dimen/_80sdp"
             android:layout_height="@dimen/_80sdp"
-            android:textSize="30sp"
+            android:textSize="25sp"
             android:background="@drawable/white_circle_drawable"
             android:textColor="@android:color/white"
             android:gravity="center"
@@ -33,7 +33,7 @@
             android:id="@+id/textViewEmail"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:textSize="@dimen/_22sdp"
+            android:textSize="@dimen/_18sdp"
             android:textColor="@color/colorBackground"
             android:text="luqman"
             android:gravity="center"
@@ -51,8 +51,8 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginTop="@dimen/_20sdp"
-        android:layout_marginLeft="@dimen/_30sdp"
-        android:layout_marginRight="@dimen/_30sdp"
+        android:layout_marginLeft="@dimen/_25sdp"
+        android:layout_marginRight="@dimen/_25sdp"
         android:orientation="vertical"
         >
 
@@ -81,16 +81,26 @@
                     android:layout_gravity="center"
                     >
 
+                    <ImageView
+                        android:id="@+id/profile"
+                        android:layout_width="@dimen/_50sdp"
+                        android:layout_height="@dimen/_30sdp"
+                        android:src="@drawable/edit"
+                        android:layout_centerHorizontal="true"
+                        />
+
 
                     <TextView
-                        android:layout_width="match_parent"
+                        android:layout_below="@id/profile"
+                        android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="Profile Tab"
+                        android:text="Profile"
                         android:gravity="center"
                         android:textColor="@color/colororange"
-                        android:textSize="@dimen/_25sdp"
+                        android:textSize="@dimen/_16sdp"
                         android:textStyle="bold"
-                        ></TextView>
+                        android:layout_centerHorizontal="true"
+                        />
 
 
 
@@ -119,15 +129,25 @@
                     android:layout_gravity="center"
                     >
 
+                    <ImageView
+                        android:id="@+id/link"
+                        android:layout_width="@dimen/_50sdp"
+                        android:layout_height="@dimen/_30sdp"
+                        android:src="@drawable/links"
+                        android:layout_centerHorizontal="true"
+                        />
+
 
                     <TextView
+                        android:layout_below="@id/link"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:text="Health Link Tab"
+                        android:text="Health Tips"
                         android:gravity="center"
                         android:textColor="@color/colororange"
-                        android:textSize="@dimen/_25sdp"
+                        android:textSize="@dimen/_16sdp"
                         android:textStyle="bold"
+                        android:layout_centerHorizontal="true"
                         ></TextView>
 
 
@@ -167,16 +187,25 @@
                     android:layout_gravity="center"
                     >
 
+                    <ImageView
+                        android:id="@+id/health_data"
+                        android:layout_width="@dimen/_50sdp"
+                        android:layout_height="@dimen/_30sdp"
+                        android:src="@drawable/adddata"
+                        android:layout_centerHorizontal="true"
+                        />
+
 
                     <TextView
+                        android:layout_below="@id/health_data"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:text="Health Data"
                         android:gravity="center"
                         android:textColor="@color/colororange"
-                        android:textSize="@dimen/_25sdp"
-                        android:textStyle="bold"
-                        ></TextView>
+                        android:textSize="@dimen/_16sdp"
+                        android:layout_centerHorizontal="true"
+                        android:textStyle="bold" />
 
 
 
@@ -205,16 +234,25 @@
                     android:layout_gravity="center"
                     >
 
+                    <ImageView
+                        android:id="@+id/report"
+                        android:layout_width="@dimen/_50sdp"
+                        android:layout_height="@dimen/_30sdp"
+                        android:src="@drawable/report"
+                        android:layout_centerHorizontal="true"
+                        />
+
 
                     <TextView
+                        android:layout_below="@id/report"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:text="Health Report"
                         android:gravity="center"
                         android:textColor="@color/colororange"
-                        android:textSize="@dimen/_25sdp"
-                        android:textStyle="bold"
-                        ></TextView>
+                        android:textSize="@dimen/_16sdp"
+                        android:layout_centerHorizontal="true"
+                        android:textStyle="bold" />
 
 
                 </RelativeLayout>
@@ -235,7 +273,7 @@
             <androidx.cardview.widget.CardView
                 android:id="@+id/cardViewViewData"
                 android:layout_width="@dimen/_200sdp"
-                android:layout_height="@dimen/_40sdp"
+                android:layout_height="@dimen/_60sdp"
                 android:layout_marginRight="@dimen/_5sdp"
                 android:elevation="0dp"
                 android:innerRadius="0dp"
@@ -251,16 +289,24 @@
                     android:layout_gravity="center"
                     >
 
+                    <ImageView
+                        android:id="@+id/view_date"
+                        android:layout_width="@dimen/_50sdp"
+                        android:layout_height="@dimen/_30sdp"
+                        android:src="@drawable/viewdata"
+                        android:layout_centerHorizontal="true"
+                        />
+
 
                     <TextView
+                        android:layout_below="@id/view_date"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:text="View Data"
                         android:gravity="center"
                         android:textColor="@color/colororange"
-                        android:textSize="@dimen/_25sdp"
-                        android:textStyle="bold"
-                        ></TextView>
+                        android:textSize="@dimen/_16sdp"
+                        android:textStyle="bold" />
 
 
 
